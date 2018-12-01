@@ -1,4 +1,12 @@
 .step-one {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.step-one__inner {
+  max-width: 1208px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
