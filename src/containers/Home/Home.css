@@ -4,3 +4,8 @@
   flex-direction: column;
   background-color: #f7f8fc;
 }
+
+.home__steps {
+  margin-top: 32px;
+  display: flex;
+}
