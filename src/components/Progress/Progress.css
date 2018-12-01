@@ -1,0 +1,32 @@
+.progress {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.progress__step {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #999AB0;
+}
+
+.progress__bar {
+  margin-top: 8px;
+  align-self: center;
+  max-width: 1208px;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  border-radius: 1px;
+  background-color: #e5e8ed;
+}
+
+.progress__bar-indicator {
+  background-color: #4A7AE1;
+  border-radius: 1px;
+  transition: all 0.2s ease-in-out;
+}
