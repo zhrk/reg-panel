@@ -2,13 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import './Home.css';
-import logo from '../../images/react-logo.svg';
 
-const Home = ({ user }) => {
+const Home = () => {
   return (
     <div className="home">
-      <img src={logo} alt="logo" />
-      <h1>Hello, {user.name}!</h1>
+
     </div>
   );
 }
