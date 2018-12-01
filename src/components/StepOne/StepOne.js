@@ -6,7 +6,10 @@ const StepOne = () => {
   return (
     <div className="step-one">
       <div className="step-one__inner">
-        <Title text="Регистрация" />
+        <Title
+          text="Регистрация"
+          previousStep={0}
+        />
       </div>
     </div>
   );

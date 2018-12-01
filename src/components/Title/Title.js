@@ -3,7 +3,18 @@ import './Title.css';
 import PropTypes from 'prop-types';
 import arrow from '../../images/Title/arrow.svg';
 
-const Title = ({ text, star }) => {
+const Title = ({ text, star, previousStep }) => {
+
+  const renderBackBtn = () => {
+    if (previousStep !== 0) {
+      return (
+        <div className="title__back">
+          <img src={arrow} alt="Назад" aria-hidden="true" />
+          <span>Назад</span>
+        </div>
+      );
+    }
+  }
 
   const renderStar = () => {
     if (star === true) {
@@ -15,10 +26,7 @@ const Title = ({ text, star }) => {
 
   return (
     <div className="title">
-      <div className="title__back">
-        <img src={arrow} alt="Назад" aria-hidden="true" />
-        <span>Назад</span>
-      </div>
+      { renderBackBtn () }
       <div className="title__text">
         <span>{text}</span>
         { renderStar() }
@@ -29,6 +37,7 @@ const Title = ({ text, star }) => {
 }
 
 Title.propTypes = {
+  previousStep: PropTypes.number.isRequired,
   text: PropTypes.string.isRequired,
   star: PropTypes.bool
 };
