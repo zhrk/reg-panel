@@ -1,0 +1,13 @@
+.sub-title {
+  align-self: center;
+  max-width: 792px;
+  width: 100%;
+  margin-top: 16px;
+  line-height: 27px;
+  font-size: 16px;
+  text-align: center;
+  color: #122244;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
