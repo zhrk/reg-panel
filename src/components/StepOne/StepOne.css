@@ -14,3 +14,7 @@
   padding-right: 16px;
   box-sizing: border-box;
 }
+
+.step-one__form > .input:not(:last-child) {
+  margin-bottom: 16px;
+}

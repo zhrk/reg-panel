@@ -10,6 +10,7 @@ class StepOne extends Component {
     super(props);
 
     this.nameInput = React.createRef();
+    this.emailInput = React.createRef();
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -18,6 +19,7 @@ class StepOne extends Component {
     event.preventDefault();
 
     console.log(this.nameInput.current.validate());
+    console.log(this.emailInput.current.validate());
   }
 
   render() {
@@ -39,6 +41,16 @@ class StepOne extends Component {
               max: 'Имя слишком длинное'
             }}
             ref={this.nameInput}
+          />
+          <Input
+            id="email"
+            label="Почта"
+            placeholder="example@mail.com"
+            validate="email"
+            errorMessages={{
+              email: 'Неверный формат почты'
+            }}
+            ref={this.emailInput}
           />
           <button>Далее</button>
         </form>

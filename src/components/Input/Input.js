@@ -69,17 +69,18 @@ class Input extends Component {
         id: this.props.id,
         error: false,
         value: value
-      }
+      };
     } else {
       return {
         id: this.props.id,
         error: true,
         value: value
-      }
+      };
     }
 
   }
 
+  //methods for label/placeholder/classes render logic
   renderLabel() {
     if (this.props.label !== '') {
       return (
