@@ -6,13 +6,14 @@ import SubTitle from '../SubTitle/SubTitle';
 const StepOne = () => {
   return (
     <div className="step-one">
-      <div className="step-one__inner">
-        <Title
-          text="Регистрация"
-          previousStep={0}
-        />
-        <SubTitle text="Пройдите быструю регистрацию для оформления покупки франшизы" />
-      </div>
+      <Title
+        text="Регистрация"
+        previousStep={0}
+      />
+      <SubTitle text="Пройдите быструю регистрацию для оформления покупки франшизы" />
+      <form className="step-one__form">
+        123
+      </form>
     </div>
   );
 }

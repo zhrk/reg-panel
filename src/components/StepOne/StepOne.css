@@ -1,12 +1,16 @@
 .step-one {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
-.step-one__inner {
-  max-width: 1208px;
+.step-one__form {
+  margin-top: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
 }
