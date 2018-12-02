@@ -17,7 +17,7 @@ class StepOne extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    this.nameInput.current.validate();
+    console.log(this.nameInput.current.validate());
   }
 
   render() {
@@ -30,6 +30,14 @@ class StepOne extends Component {
         <SubTitle text="Пройдите быструю регистрацию для оформления покупки франшизы" />
         <form className="step-one__form" onSubmit={this.handleSubmit}>
           <Input
+            id="name"
+            label="Имя"
+            placeholder="Афина"
+            validate="min:2|max:20"
+            errorMessages={{
+              min: 'Имя слишком короткое',
+              max: 'Имя слишком длинное'
+            }}
             ref={this.nameInput}
           />
           <button>Далее</button>
