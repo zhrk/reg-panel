@@ -10,6 +10,8 @@ class Input extends Component {
       value: ''
     };
 
+    this.inputField = React.createRef();
+
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -19,6 +21,10 @@ class Input extends Component {
     });
   }
 
+  validate() {
+    console.log('validate');
+  }
+
   render() {
     return (
       <div className="input">
@@ -26,6 +32,7 @@ class Input extends Component {
           type="text"
           value={this.state.value}
           onChange={this.handleChange}
+          ref={this.inputField}
         />
       </div>
     );
