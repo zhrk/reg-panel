@@ -18,3 +18,10 @@
 .step-one__form > .input:not(:last-child) {
   margin-bottom: 16px;
 }
+
+.step-one__form-bottom {
+  width: 100%;
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}

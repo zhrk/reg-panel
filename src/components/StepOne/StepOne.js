@@ -3,6 +3,7 @@ import './StepOne.css';
 import Title from '../Title/Title';
 import SubTitle from '../SubTitle/SubTitle';
 import Input from '../Input/Input';
+import Button from '../Button/Button';
 
 class StepOne extends Component {
 
@@ -52,7 +53,9 @@ class StepOne extends Component {
             }}
             ref={this.emailInput}
           />
-          <button>Далее</button>
+          <div className="step-one__form-bottom">
+            <Button text="Далее" />
+          </div>
         </form>
       </div>
     );
