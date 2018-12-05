@@ -6,6 +6,7 @@ import Logo from '../../components/Logo/Logo';
 import Progress from '../../components/Progress/Progress';
 import StepOne from '../../components/StepOne/StepOne';
 import StepTwo from '../../components/StepTwo/StepTwo';
+import StepThree from '../../components/StepThree/StepThree';
 import { setCurrentStep } from '../../actions/progressActions';
 
 const Home = props => {
@@ -18,6 +19,8 @@ const Home = props => {
         return <StepOne setCurrentStep={setCurrentStep} />
       case 2:
         return <StepTwo setCurrentStep={setCurrentStep} />
+      case 3:
+        return <StepThree setCurrentStep={setCurrentStep} />
       default:
         break;
     }

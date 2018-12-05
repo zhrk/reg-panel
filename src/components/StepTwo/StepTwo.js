@@ -9,8 +9,7 @@ const StepTwo = ({ setCurrentStep }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    console.log('submit');
+    setCurrentStep(3);
   }
 
   return (
