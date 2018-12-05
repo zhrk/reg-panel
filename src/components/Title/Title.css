@@ -1,11 +1,18 @@
 .title {
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
   padding-left: 16px;
   padding-right: 16px;
   box-sizing: border-box;
+}
+
+.title__inner {
+  max-width: 1208px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .title__back {

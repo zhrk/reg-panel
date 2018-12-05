@@ -30,10 +30,12 @@ const Title = ({ text, star, previousStep, setCurrentStep }) => {
 
   return (
     <div className="title">
-      { renderBackBtn () }
-      <div className="title__text">
-        <span>{text}</span>
-        { renderStar() }
+      <div className="title__inner">
+        { renderBackBtn () }
+        <div className="title__text">
+          <span>{text}</span>
+          { renderStar() }
+        </div>
       </div>
     </div>
   );
