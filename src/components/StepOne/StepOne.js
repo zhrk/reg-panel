@@ -71,6 +71,7 @@ class StepOne extends Component {
         <Title
           text="Регистрация"
           previousStep={0}
+          setCurrentStep={this.props.setCurrentStep}
         />
         <SubTitle text="Пройдите быструю регистрацию для оформления покупки франшизы" />
         <form className="step-one__form" onSubmit={this.handleSubmit}>

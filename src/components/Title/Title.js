@@ -43,9 +43,10 @@ const Title = ({ text, star, previousStep, setCurrentStep }) => {
 }
 
 Title.propTypes = {
-  previousStep: PropTypes.number.isRequired,
   text: PropTypes.string.isRequired,
-  star: PropTypes.bool
+  star: PropTypes.bool,
+  previousStep: PropTypes.number.isRequired,
+  setCurrentStep: PropTypes.func.isRequired
 };
 
 export default Title;
