@@ -19,8 +19,50 @@ class StepOne extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    console.log(this.nameInput.current.validate());
-    console.log(this.emailInput.current.validate());
+    /* TODO 
+      The code below is universal enough to be taken out in a separate module,
+      but need to think of a way to connect it with other types of inputs.
+    */
+
+    let fields = [
+      'name',
+      'email'
+    ];
+
+    let response = [];
+    let errors = [];
+
+    fields.forEach(element => {
+      response.push(this[element + 'Input'].current.validate());
+    });
+
+    response.forEach(element => {
+      errors.push(element.error);
+    });
+
+    if (errors.indexOf(true) === -1) {
+      let data = {};
+
+      response.forEach(element => {
+        data[element['id']] = {
+          value: element['value']
+        };
+      });
+
+      console.log('nice');
+
+    } else {
+      // focus() on first fields[] el if errors length > 0
+      for (let index = 0; index < response.length; index++) {
+        if (response[index].error === true) {
+          let inputComponent = this[response[index].id + 'Input'].current;
+          let inputField = inputComponent.inputField.current;
+          inputField.focus();
+          break;
+        }
+      }
+    }
+
   }
 
   render() {
