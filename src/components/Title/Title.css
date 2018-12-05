@@ -15,6 +15,7 @@
   align-items: center;
   transform: translateY(1px);
   cursor: pointer;
+  user-select: none;
 }
 
 .title__back > img {

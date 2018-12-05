@@ -4,7 +4,7 @@ import Title from '../Title/Title';
 import SubTitle from '../SubTitle/SubTitle';
 import Button from '../Button/Button';
 
-const StepTwo = () => {
+const StepTwo = ({ setCurrentStep }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,6 +17,7 @@ const StepTwo = () => {
       <Title
         text="Промо Материалы"
         previousStep={1}
+        setCurrentStep={setCurrentStep}
       />
       <SubTitle text="Ознакомьтесь с нашими промо-материалами и внимательно изучите презентацию
       франшизы и все дополнительные материалы и инструкции, опубликованные на этой странице" />
