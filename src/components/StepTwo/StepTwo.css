@@ -1,27 +1,21 @@
-.step-one {
+.step-two {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.step-one__form {
+.step-two__form {
   margin-top: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-left: 16px;
   padding-right: 16px;
   box-sizing: border-box;
 }
 
-.step-one__form > .input:not(:last-child) {
-  margin-bottom: 16px;
-}
-
-.step-one__form-bottom {
-  width: 100%;
-  margin-top: 48px;
+.step-two__form-bottom {
+  margin-top: 80px;
   display: flex;
   justify-content: center;
 }

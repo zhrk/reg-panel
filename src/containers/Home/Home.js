@@ -5,6 +5,7 @@ import './Home.css';
 import Logo from '../../components/Logo/Logo';
 import Progress from '../../components/Progress/Progress';
 import StepOne from '../../components/StepOne/StepOne';
+import StepTwo from '../../components/StepTwo/StepTwo';
 
 const Home = props => {
 
@@ -12,6 +13,8 @@ const Home = props => {
     switch (props.progress.currentStep) {
       case 1:
         return <StepOne />
+      case 2:
+        return <StepTwo />
       default:
         break;
     }
