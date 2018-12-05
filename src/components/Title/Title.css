@@ -60,7 +60,7 @@
 
 @media (max-width: 767px) {
 
-  .title {
+  .title__inner {
     flex-direction: column;
   }
 
