@@ -1,0 +1,15 @@
+.total-price {
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+  color: #122244;
+}
+
+@media (max-width: 767px) {
+  
+  .total-price {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+}

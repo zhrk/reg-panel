@@ -21,7 +21,18 @@
 
 .step-one__form-bottom {
   width: 100%;
+  max-width: 1208px;
   margin-top: 48px;
   display: flex;
   justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  
+  .step-one__form-bottom {
+    flex-direction: column;
+  }
+
 }
