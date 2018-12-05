@@ -49,7 +49,7 @@ class StepOne extends Component {
         };
       });
 
-      console.log('nice');
+      this.props.setCurrentStep(2);
 
     } else {
       // focus() on first fields[] el if errors length > 0

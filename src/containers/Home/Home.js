@@ -6,18 +6,22 @@ import Logo from '../../components/Logo/Logo';
 import Progress from '../../components/Progress/Progress';
 import StepOne from '../../components/StepOne/StepOne';
 import StepTwo from '../../components/StepTwo/StepTwo';
+import { setCurrentStep } from '../../actions/progressActions';
 
 const Home = props => {
 
   const renderStep = () => {
+    const { setCurrentStep } = props;
+
     switch (props.progress.currentStep) {
       case 1:
-        return <StepOne />
+        return <StepOne setCurrentStep={setCurrentStep} />
       case 2:
-        return <StepTwo />
+        return <StepTwo setCurrentStep={setCurrentStep} />
       default:
         break;
     }
+
   }
 
   return (
@@ -42,4 +46,10 @@ const mapStateToProps = store => {
   };
 }
 
-export default withRouter(connect(mapStateToProps)(Home));
+const mapDispatchToProps = dispatch => {
+  return {
+    setCurrentStep: step => dispatch(setCurrentStep(step))
+  };
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
