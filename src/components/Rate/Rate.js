@@ -2,7 +2,12 @@ import React from 'react';
 import './Rate.css';
 import PropTypes from 'prop-types';
 
-const Rate = ({ id, title, borderColor, price, features, pricing }) => {
+const Rate = ({ id, title, borderColor, price, features, pricing, handler }) => {
+
+  /* TODO
+    excess render, replace to class and change
+    shouldComponentUpdate
+  */
 
   const featuresList = features.map(function(item, index) {
     return (
@@ -27,6 +32,10 @@ const Rate = ({ id, title, borderColor, price, features, pricing }) => {
     );
   });
 
+  const handleClick = () => {
+    handler(id);
+  }
+
   return (
     <div className="rate">
       <input className="rate__input" type="radio" id={'rate__' + id} name="rate" />
@@ -34,6 +43,7 @@ const Rate = ({ id, title, borderColor, price, features, pricing }) => {
         className="rate__label"
         htmlFor={'rate__' + id}
         style={{'borderTopColor': borderColor}}
+        onClick={handleClick}
       >
         <div className="rate__title">{title}</div>
         <div className="rate__price">
@@ -57,7 +67,8 @@ Rate.propTypes = {
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   features: PropTypes.array.isRequired,
-  pricing: PropTypes.array.isRequired
+  pricing: PropTypes.array.isRequired,
+  handler: PropTypes.func.isRequired
 };
 
 export default Rate;
