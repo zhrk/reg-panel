@@ -35,6 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
   user-select: none;
 }
 
@@ -51,6 +52,8 @@
   right: 8px;
   border: 1px solid #4A7AE1;
   box-sizing: border-box;
+  pointer-events: none;
+  user-select: none;
 }
 
 .card__input:hover + .card__label > .card__checkbox {
@@ -141,4 +144,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
+  user-select: none;
 }

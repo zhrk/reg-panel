@@ -9,7 +9,7 @@ import stripe from '../../images/Card/stripe.png';
 import walletone from '../../images/Card/walletone.png';
 import freekassa from '../../images/Card/freekassa.png';
 import amocrm from '../../images/Card/amocrm.png';
-import zandesk from '../../images/Card/zandesk.png';
+import zendesk from '../../images/Card/zendesk.png';
 import jivosite from '../../images/Card/jivosite.png';
 import sendpulse from '../../images/Card/sendpulse.png';
 import design from '../../images/Card/design.png';
@@ -28,7 +28,7 @@ class Card extends Component {
       case 'walletone': return walletone;
       case 'freekassa': return freekassa;
       case 'amocrm': return amocrm;
-      case 'zandesk': return zandesk;
+      case 'zendesk': return zendesk;
       case 'jivosite': return jivosite;
       case 'sendpulse': return sendpulse;
       case 'design': return design;
