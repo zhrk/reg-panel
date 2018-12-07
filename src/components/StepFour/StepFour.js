@@ -4,6 +4,7 @@ import Title from '../Title/Title';
 import SubTitle from '../SubTitle/SubTitle';
 import Button from '../Button/Button';
 import TotalPrice from '../TotalPrice/TotalPrice';
+import Card from '../Card/Card';
 
 class StepFour extends Component {
 
@@ -31,6 +32,12 @@ class StepFour extends Component {
         <SubTitle text="Выберите онлайн-систему поддержки для своих клиентов
         и платежную систему, которую вы будете использовать для приема оплаты от клиентов на своем сайте" />
         <form className="step-four__form" onSubmit={this.handleSubmit}>
+          <div className="step-four__form-inner">
+            <div className="step-four__title">Платежные системы <span>**</span></div>
+            <div className="step-four__cards">
+              <Card />
+            </div>
+          </div>
           <div className="step-four__form-bottom">
             <div className="step-four__form-bottom-inner">
               <TotalPrice value={0} />

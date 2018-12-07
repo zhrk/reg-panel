@@ -14,6 +14,35 @@
   box-sizing: border-box;
 }
 
+.step-four__form-inner {
+  max-width: 1208px;
+  width: 100%;
+  align-self: center;
+}
+
+.step-four__title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #122244;
+  display: flex;
+}
+
+.step-four__title > span {
+  display: block;
+  font-size: 16px;
+  color: #999AB0;
+  transform: translate(5px, 3px);
+}
+
+.step-four__form-inner > .step-four__title:not(:first-child) {
+  margin-top: 40px;
+}
+
+.step-four__cards {
+  margin-top: 24px;
+  display: flex;
+}
+
 .step-four__form-bottom {
   margin-top: 80px;
   display: flex;
