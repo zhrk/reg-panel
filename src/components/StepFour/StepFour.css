@@ -12,6 +12,7 @@
   padding-left: 16px;
   padding-right: 16px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .step-four__form-inner {
@@ -34,17 +35,36 @@
   transform: translate(5px, 3px);
 }
 
-.step-four__form-inner > .step-four__title:not(:first-child) {
-  margin-top: 40px;
-}
-
 .step-four__cards {
   margin-top: 24px;
   display: flex;
+  flex-wrap: wrap;
 }
 
-.step-four__cards > .card:not(:last-child) {
+.step-four__cards > .card:not(:nth-child(6)) {
   margin-right: 40px;
+}
+
+.step-four__cards > .card {
+  margin-bottom: 40px;
+}
+
+.step-four__form-info {
+  border-top: 1px solid #e5e8ed;
+  padding-top: 16px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-four__form-info > p {
+  font-size: 14px;
+  color: #999AB0;
+  margin: 0;
+}
+
+.step-four__form-info > p:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .step-four__form-bottom {
@@ -67,6 +87,20 @@
 
   .step-four__form-bottom-inner {
     flex-direction: column;
+  }
+
+  .step-four__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-four__cards > .card:not(:nth-child(6)) {
+    margin-right: 0;
+  }
+
+  .step-four__title {
+    text-align: center;
+    justify-content: center;
   }
 
 }

@@ -152,6 +152,11 @@ class StepFour extends Component {
                 addInfo="$1/слово"
               />
             </div>
+            <div className="step-four__form-info">
+              <p>* Все интеграции входят в стоимость любого пакета франшизы.</p>
+              <p>** Возможно подключить только 1 платежную систему, дополнительная
+              платежная система будет стоить + $100 к стоимости выбранного пакета франшизы</p>
+            </div>
           </div>
           <div className="step-four__form-bottom">
             <div className="step-four__form-bottom-inner">
