@@ -2,8 +2,20 @@ import React, { Component } from 'react';
 import './Card.css';
 import PropTypes from 'prop-types';
 import info from '../../images/Card/info.svg';
-import yandex from '../../images/Card/yandex.svg';
-import robokassa from '../../images/Card/robokassa.svg';
+import yandex from '../../images/Card/yandex.png';
+import robokassa from '../../images/Card/robokassa.png';
+import paypal from '../../images/Card/paypal.png';
+import stripe from '../../images/Card/stripe.png';
+import walletone from '../../images/Card/walletone.png';
+import freekassa from '../../images/Card/freekassa.png';
+import amocrm from '../../images/Card/amocrm.png';
+import zandesk from '../../images/Card/zandesk.png';
+import jivosite from '../../images/Card/jivosite.png';
+import sendpulse from '../../images/Card/sendpulse.png';
+import design from '../../images/Card/design.png';
+import webdev from '../../images/Card/webdev.png';
+import copy from '../../images/Card/copy.png';
+import translates from '../../images/Card/translates.png';
 
 class Card extends Component {
 
@@ -11,6 +23,18 @@ class Card extends Component {
     switch (this.props.img) {
       case 'yandex': return yandex;
       case 'robokassa': return robokassa;
+      case 'paypal': return paypal;
+      case 'stripe': return stripe;
+      case 'walletone': return walletone;
+      case 'freekassa': return freekassa;
+      case 'amocrm': return amocrm;
+      case 'zandesk': return zandesk;
+      case 'jivosite': return jivosite;
+      case 'sendpulse': return sendpulse;
+      case 'design': return design;
+      case 'webdev': return webdev;
+      case 'copy': return copy;
+      case 'translates': return translates;
       default: break;
     }
   }
