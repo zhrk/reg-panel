@@ -2,3 +2,143 @@
   display: flex;
   flex-direction: column;
 }
+
+.card__input {
+  display: none;
+}
+
+.card__label {
+  width: 168px;
+  height: 104px;
+  background: #FFF;
+  box-shadow: 0px 1px 2px rgba(13, 42, 80, 0.16);
+  border-radius: 4px;
+  position: relative;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card__input:checked + .card__label {
+  border: 2px solid #4A7AE1
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.card__checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  opacity: 0;
+  top: 8px;
+  right: 8px;
+  border: 1px solid #4A7AE1;
+  box-sizing: border-box;
+}
+
+.card__input:hover + .card__label > .card__checkbox {
+  opacity: 1;
+}
+
+.card__input:checked + .card__label > .card__checkbox {
+  background-image: url('../../images/Card/check.svg');
+  opacity: 1;
+  background-color: #4A7AE1;
+}
+
+.card__bottom {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__title {
+  font-size: 16px;
+  color: #122244;
+  font-weight: 600;
+}
+
+.card__info {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.card__info-text {
+  top: 32px;
+  left: calc(50% - 6px);
+  transform: translateX(-50%);
+  position: absolute;
+  width: 376px;
+  background-color: rgba(18, 34, 68, 0.8);
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  line-height: 24px;
+  font-size: 14px;
+  color: #FFF;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card__info:hover > .card__info-text {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.card__info-text:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 50%;
+  top: -7px;
+  transform: translateY(-50%);
+  border-top: 7px solid rgba(0, 0, 0, 0);
+  border-bottom: 7px solid rgba(18, 34, 68, 0.8);
+  border-left: 7px solid rgba(0, 0, 0, 0);
+  border-right: 7px solid rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  transition: all .2s ease-in-out;
+}
+
+.card__add-info {
+  border-radius: 8px;
+  background-color: #6e95e7;
+  height: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

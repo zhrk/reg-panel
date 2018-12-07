@@ -35,7 +35,22 @@ class StepFour extends Component {
           <div className="step-four__form-inner">
             <div className="step-four__title">Платежные системы <span>**</span></div>
             <div className="step-four__cards">
-              <Card />
+              <Card
+                id="yandex"
+                title="Яндекс Касса"
+                img="yandex"
+                info="Яндекс.Касса: простое подключение платежных систем для
+                интернет-магазинов и любых других сайтов. Банковские карты:
+                Visa, MasterCard и Maestro, «Мир», Яндекс.Деньги и другие способы оплаты."
+              />
+              <Card
+                id="robokassa"
+                title="Робокасса"
+                img="robokassa"
+                info="ROBOKASSA – сервис для организации приема платежей на сайте,
+                интернет магазине и социальных сетях. Прием платежей осуществляется
+                при минимальных комиссиях."
+              />
             </div>
           </div>
           <div className="step-four__form-bottom">

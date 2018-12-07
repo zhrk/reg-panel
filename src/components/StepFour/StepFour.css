@@ -43,6 +43,10 @@
   display: flex;
 }
 
+.step-four__cards > .card:not(:last-child) {
+  margin-right: 40px;
+}
+
 .step-four__form-bottom {
   margin-top: 80px;
   display: flex;
