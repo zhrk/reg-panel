@@ -1,0 +1,39 @@
+.step-four {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-four__form {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+.step-four__form-bottom {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.step-four__form-bottom-inner {
+  max-width: 1208px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+
+  .step-four__form-bottom-inner {
+    flex-direction: column;
+  }
+
+}

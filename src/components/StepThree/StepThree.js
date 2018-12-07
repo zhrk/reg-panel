@@ -12,7 +12,8 @@ class StepThree extends Component {
     super(props);
 
     this.state = {
-      selectedRate: null
+      selectedRate: null,
+      buttonIsDisabled: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,14 +24,20 @@ class StepThree extends Component {
     event.preventDefault();
 
     if (this.state.selectedRate !== null) {
-      console.log('opa');
+      this.props.setRate(this.state.selectedRate);
+      this.props.setCurrentStep(4);
+    } else {
+      this.setState({
+        buttonIsDisabled: true
+      });
     }
 
   }
 
   selectRate(name) {
     this.setState({
-      selectedRate: name
+      selectedRate: name,
+      buttonIsDisabled: false
     });
   }
 
@@ -152,7 +159,7 @@ class StepThree extends Component {
           <div className="step-three__form-bottom">
             <div className="step-three__form-bottom-inner">
               <TotalPrice value={0} />
-              <Button text="Далее" />
+              <Button text="Далее" disabled={this.state.buttonIsDisabled} />
             </div>
           </div>
         </form>

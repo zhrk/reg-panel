@@ -1,10 +1,20 @@
 import React from 'react';
 import './Button.css';
 import arrow from '../../images/Button/arrow.svg';
+import PropTypes from 'prop-types';
 
-const Button = ({ text }) => {
+const Button = ({ text, disabled }) => {
+
+  const renderDisabledAttribute = () => {
+    if (disabled === true) {
+      return 'disabled';
+    } else {
+      return null;
+    }
+  }
+
   return (
-    <button className="button">
+    <button className="button" disabled={ renderDisabledAttribute() }>
       {text}
       <img
         src={arrow}
@@ -14,6 +24,16 @@ const Button = ({ text }) => {
       />
     </button>
   );
+
 }
+
+Button.defaultProps = {
+  disabled: false
+};
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  disabled: PropTypes.bool
+};
 
 export default Button;

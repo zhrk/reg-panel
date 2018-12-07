@@ -49,6 +49,8 @@ class StepOne extends Component {
         };
       });
 
+      this.props.setName(data.name.value);
+      this.props.setEmail(data.email.value);
       this.props.setCurrentStep(2);
 
     } else {

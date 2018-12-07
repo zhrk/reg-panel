@@ -7,20 +7,43 @@ import Progress from '../../components/Progress/Progress';
 import StepOne from '../../components/StepOne/StepOne';
 import StepTwo from '../../components/StepTwo/StepTwo';
 import StepThree from '../../components/StepThree/StepThree';
+import StepFour from '../../components/StepFour/StepFour';
 import { setCurrentStep } from '../../actions/progressActions';
+import { setName, setEmail, setRate } from '../../actions/userActions';
 
 const Home = props => {
 
   const renderStep = () => {
-    const { setCurrentStep } = props;
+    const { setCurrentStep, setName, setEmail, setRate } = props;
 
     switch (props.progress.currentStep) {
       case 1:
-        return <StepOne setCurrentStep={setCurrentStep} />
+        return (
+          <StepOne
+            setCurrentStep={setCurrentStep}
+            setName={setName}
+            setEmail={setEmail}
+          />
+        );
+
       case 2:
         return <StepTwo setCurrentStep={setCurrentStep} />
+
       case 3:
-        return <StepThree setCurrentStep={setCurrentStep} />
+        return (
+          <StepThree
+            setCurrentStep={setCurrentStep}
+            setRate={setRate}
+          />
+        );
+
+      case 4:
+        return (
+          <StepFour
+            setCurrentStep={setCurrentStep}
+          />
+        );
+
       default:
         break;
     }
@@ -51,7 +74,10 @@ const mapStateToProps = store => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setCurrentStep: step => dispatch(setCurrentStep(step))
+    setCurrentStep: step => dispatch(setCurrentStep(step)),
+    setName: name => dispatch(setName(name)),
+    setEmail: email => dispatch(setEmail(email)),
+    setRate: rate => dispatch(setRate(rate))
   };
 };
 
