@@ -20,6 +20,10 @@
   cursor: pointer;
 }
 
+.card__label--disabled {
+  pointer-events: none;
+}
+
 .card__input:checked + .card__label {
   border: 2px solid #4A7AE1
 }

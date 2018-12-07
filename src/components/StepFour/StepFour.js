@@ -20,6 +20,10 @@ class StepFour extends Component {
     console.log('submit');
   }
 
+  select() {
+    console.log('select');
+  }
+
   render() {
     return (
       <div className="step-four">
@@ -39,6 +43,7 @@ class StepFour extends Component {
                 id="yandex"
                 title="Яндекс Касса"
                 img="yandex"
+                handler={this.select}
                 info="Яндекс.Касса: простое подключение платежных систем для
                 интернет-магазинов и любых других сайтов. Банковские карты:
                 Visa, MasterCard и Maestro, «Мир», Яндекс.Деньги и другие способы оплаты."
@@ -47,6 +52,7 @@ class StepFour extends Component {
                 id="robokassa"
                 title="Робокасса"
                 img="robokassa"
+                handler={this.select}
                 info="ROBOKASSA – сервис для организации приема платежей на сайте,
                 интернет магазине и социальных сетях. Прием платежей осуществляется
                 при минимальных комиссиях."
@@ -55,6 +61,7 @@ class StepFour extends Component {
                 id="paypal"
                 title="PayPal"
                 img="paypal"
+                handler={this.select}
                 info="Совершать денежные переводы и принимать онлайн-платежи с помощью
                 PayPal просто и безопасно — как для личных целей, так и для бизнеса."
               />
@@ -62,6 +69,7 @@ class StepFour extends Component {
                 id="stripe"
                 title="Stripe"
                 img="stripe"
+                handler={this.select}
                 info="Online payment processing for internet businesses. Stripe is a suite
                 of payment APIs that powers commerce for online businesses of all sizes,
                 including fraud prevention, and subscription management. Use Stripe’s
@@ -72,6 +80,7 @@ class StepFour extends Component {
                 id="walletone"
                 title="Wallet One"
                 img="walletone"
+                handler={this.select}
                 info="Прием платежей на сайте — подключите сегодня и принимайте банковские
                 карты, электронные деньги,  наличные и другие способы. Тарифы и инструкция
                 по подключению."
@@ -80,6 +89,7 @@ class StepFour extends Component {
                 id="freekassa"
                 title="Free-kassa"
                 img="freekassa"
+                handler={this.select}
                 info="Электронный платежный сервис. Подключение приема платежей на сайте:
                 банковские карты (эквайринг), интернет-банки и другие способы оплаты."
               />
@@ -90,6 +100,7 @@ class StepFour extends Component {
                 id="amocrm"
                 title="amoCRM"
                 img="amocrm"
+                disabled={true}
                 info="Система amoCRM – удобная web программа для анализа продаж, доступная
                 в режиме online из любой точки мира! Подробности узнавайте по указанным
                 на сайте телефонам в Москве."
@@ -98,6 +109,7 @@ class StepFour extends Component {
                 id="zendesk"
                 title="Zendesk"
                 img="zendesk"
+                disabled={true}
                 info="ПО для обслуживания клиентов и система поддержки на основе тикетов
                 от Zendesk. Облачное решение для служб поддержки, которым пользуются
                 более 200 000 организаций во всем мире. Бесплатное 30-дневное ознакомление."
@@ -106,6 +118,7 @@ class StepFour extends Component {
                 id="jivosite"
                 title="Jivosite"
                 img="jivosite"
+                disabled={true}
                 info="Онлайн консультант для Вашего сайта. Установка за 5 минут, звонки
                 с сайта, есть бесплатная версия! Увеличивает конверсию и продажи!"
               />
@@ -113,6 +126,7 @@ class StepFour extends Component {
                 id="sendpulse"
                 title="SendPulse"
                 img="sendpulse"
+                disabled={true}
                 info="SendPulse - единая платформа для email рассылок, SMS, web push
                 уведомлений и транзакционных писем."
               />
@@ -123,6 +137,7 @@ class StepFour extends Component {
                 id="design"
                 title="Дизайн cайта"
                 img="design"
+                disabled={true}
                 info="SendPulse - единая платформа для email рассылок, SMS, web push
                 уведомлений и транзакционных писем."
                 addInfo="$1000"
@@ -131,6 +146,7 @@ class StepFour extends Component {
                 id="webdev"
                 title="Веб-разработка"
                 img="webdev"
+                disabled={true}
                 info="SendPulse - единая платформа для email рассылок, SMS, web push
                 уведомлений и транзакционных писем."
                 addInfo="$35/час"
@@ -139,6 +155,7 @@ class StepFour extends Component {
                 id="copy"
                 title="Копия системы"
                 img="copy"
+                disabled={true}
                 info="SendPulse - единая платформа для email рассылок, SMS, web push
                 уведомлений и транзакционных писем."
                 addInfo="$300"
@@ -147,6 +164,7 @@ class StepFour extends Component {
                 id="translates"
                 title="Переводы"
                 img="translates"
+                disabled={true}
                 info="SendPulse - единая платформа для email рассылок, SMS, web push
                 уведомлений и транзакционных писем."
                 addInfo="$1/слово"

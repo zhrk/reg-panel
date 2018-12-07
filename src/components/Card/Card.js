@@ -19,6 +19,12 @@ import translates from '../../images/Card/translates.png';
 
 class Card extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   renderImg() {
     switch (this.props.img) {
       case 'yandex': return yandex;
@@ -41,15 +47,31 @@ class Card extends Component {
 
   renderAddInfo() {
     if (this.props.addInfo !== null) {
-      return <div className="card__add-info">$1000</div>;
+      return <div className="card__add-info">{this.props.addInfo}</div>;
     }
+  }
+
+  renderDisabledClass() {
+    if (this.props.disabled === true) {
+      return ' card__label--disabled';
+    } else {
+      return '';
+    }
+  }
+
+  handleClick() {
+    this.props.handler();
   }
 
   render() {
     return (
       <div className="card">
         <input className="card__input" id={'card__' + this.props.id} type="checkbox" />
-        <label className="card__label" htmlFor={'card__' + this.props.id}>
+        <label
+          className={'card__label' + this.renderDisabledClass()}
+          htmlFor={'card__' + this.props.id}
+          onClick={this.handleClick}
+        >
           <div className="card__img">
             <img src={ this.renderImg() } alt="Изображение" aria-hidden="true" />
           </div>
@@ -78,7 +100,9 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   info: PropTypes.string.isRequired,
-  addInfo: PropTypes.string
+  addInfo: PropTypes.string,
+  handler: PropTypes.func,
+  disabled: PropTypes.bool
 };
 
 export default Card;
