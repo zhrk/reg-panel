@@ -60,7 +60,7 @@ class Card extends Component {
   }
 
   handleClick() {
-    this.props.handler();
+    this.props.handler(this.props.id);
   }
 
   render() {

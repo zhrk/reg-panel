@@ -9,12 +9,12 @@ import StepTwo from '../../components/StepTwo/StepTwo';
 import StepThree from '../../components/StepThree/StepThree';
 import StepFour from '../../components/StepFour/StepFour';
 import { setCurrentStep } from '../../actions/progressActions';
-import { setName, setEmail, setRate } from '../../actions/userActions';
+import { setName, setEmail, setRate, setPayWay } from '../../actions/userActions';
 
 const Home = props => {
 
   const renderStep = () => {
-    const { setCurrentStep, setName, setEmail, setRate } = props;
+    const { setCurrentStep, setName, setEmail, setRate, setPayWay } = props;
 
     switch (props.progress.currentStep) {
       case 1:
@@ -41,6 +41,7 @@ const Home = props => {
         return (
           <StepFour
             setCurrentStep={setCurrentStep}
+            setPayWay={setPayWay}
           />
         );
 
@@ -77,7 +78,8 @@ const mapDispatchToProps = dispatch => {
     setCurrentStep: step => dispatch(setCurrentStep(step)),
     setName: name => dispatch(setName(name)),
     setEmail: email => dispatch(setEmail(email)),
-    setRate: rate => dispatch(setRate(rate))
+    setRate: rate => dispatch(setRate(rate)),
+    setPayWay: payWay => dispatch(setPayWay(payWay))
   };
 };
 

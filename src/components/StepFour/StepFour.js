@@ -11,17 +11,60 @@ class StepFour extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      payWay: [],
+      buttonIsDisabled: false
+    };
+
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.select = this.select.bind(this);
   }
 
   handleSubmit(event) {
     event.preventDefault();
 
-    console.log('submit');
+    if (this.state.payWay.length !== 0) {
+      this.props.setPayWay(this.state.payWay);
+      this.props.setCurrentStep(5);
+    } else {
+      this.setState({
+        buttonIsDisabled: true
+      });
+    }
+
   }
 
-  select() {
-    console.log('select');
+  select(payWay) {
+    let tempArray = this.state.payWay;
+    
+    if (this.state.payWay.indexOf(payWay) === -1) {
+      tempArray.push(payWay);
+
+      this.setState({
+        payWay: tempArray,
+        buttonIsDisabled: false
+      });
+
+    } else {
+      this.state.payWay.forEach((element, index) => {
+        if (element === payWay) {
+          tempArray.splice(index, 1);
+
+          if (tempArray.length === 0) {
+            this.setState({
+              payWay: tempArray,
+              buttonIsDisabled: true
+            });
+          } else {
+            this.setState({
+              payWay: tempArray
+            });
+          }
+
+        }
+      });
+    }
+
   }
 
   render() {
@@ -179,7 +222,7 @@ class StepFour extends Component {
           <div className="step-four__form-bottom">
             <div className="step-four__form-bottom-inner">
               <TotalPrice value={0} />
-              <Button text="Далее" />
+              <Button text="Далее" disabled={this.state.buttonIsDisabled} />
             </div>
           </div>
         </form>
