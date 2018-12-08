@@ -10,15 +10,19 @@ class Tabs extends Component {
     super(props);
 
     this.state = {
-      selectedTab: null
+      selectedTab: null,
+      error: false
     };
+
+    this.inputField = React.createRef();
 
     this.selectTab = this.selectTab.bind(this);
   }
 
   selectTab(id) {
     this.setState({
-      selectedTab: id
+      selectedTab: id,
+      error: false
     });
   }
 
@@ -29,6 +33,7 @@ class Tabs extends Component {
           key={'tab-id-' + index}
           id={item.id}
           title={item.title}
+          name={this.props.name}
           handler={this.selectTab}
         />
       );
@@ -52,9 +57,40 @@ class Tabs extends Component {
     return infoList;
   }
 
+  errorTabsClass() {
+    if (this.state.error === true) {
+      return " tabs__body--error";
+    } else {
+      return "";
+    }
+  }
+
+  validate() {
+    if (this.state.selectedTab === null) {
+
+      this.setState({
+        error: true
+      });
+
+      return {
+        id: this.props.name,
+        error: true,
+        value: this.state.selectedTab
+      };
+
+    } else {
+      return {
+        id: this.props.name,
+        error: false,
+        value: this.state.selectedTab
+      };
+    }
+
+  }
+
   render() {
     return (
-      <div className="tabs">
+      <div className="tabs" ref={this.inputField}>
         <div className="tabs__head">
           <div className="tabs__title">{this.props.title}</div>
           <div className="tabs__info">
@@ -64,7 +100,7 @@ class Tabs extends Component {
             </div>
           </div>
         </div>
-        <div className="tabs__body">
+        <div className={ 'tabs__body' + this.errorTabsClass() }>
           { this.renderTabsList() }
         </div>
         <div className="tabs__sub-info">{this.props.subInfo}</div>

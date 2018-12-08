@@ -22,8 +22,7 @@
 }
 
 .tab__label:hover {
-  background-color: #999AB0;
-  color: #fff;
+  background-color: #e6e6e8;
 }
 
 .tab__input:checked + .tab__label {

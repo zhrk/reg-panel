@@ -28,7 +28,8 @@ class StepFive extends Component {
 
     let fields = [
       'systemName',
-      'domainName'
+      'domainName',
+      'subDomainType'
     ];
 
     let response = [];
@@ -51,7 +52,7 @@ class StepFive extends Component {
         };
       });
 
-      console.log('nice');
+      console.log(data);
 
     } else {
       // focus() on first fields[] el if errors length > 0
@@ -110,6 +111,7 @@ class StepFive extends Component {
             <div className="step-five__col">
               <Tabs
                 title="Выберите поддомен"
+                name="subDomainType"
                 tabs={[
                   {
                     title: 'App',

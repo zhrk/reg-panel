@@ -2,7 +2,7 @@ import React from 'react';
 import './Tab.css';
 import PropTypes from 'prop-types';
 
-const Tab = ({ id, title, handler }) => {
+const Tab = ({ id, title, name, handler }) => {
 
   const select =() => {
     handler(id);
@@ -10,7 +10,7 @@ const Tab = ({ id, title, handler }) => {
 
   return (
     <div className="tab">
-      <input className="tab__input" id={'tab__' + id} type="radio" name="subdomain" />
+      <input className="tab__input" id={'tab__' + id} type="radio" name={name} />
       <label
         className="tab__label"
         htmlFor={'tab__' + id}
