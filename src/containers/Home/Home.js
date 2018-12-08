@@ -8,6 +8,7 @@ import StepOne from '../../components/StepOne/StepOne';
 import StepTwo from '../../components/StepTwo/StepTwo';
 import StepThree from '../../components/StepThree/StepThree';
 import StepFour from '../../components/StepFour/StepFour';
+import StepFive from '../../components/StepFive/StepFive';
 import { setCurrentStep } from '../../actions/progressActions';
 import * as userActions from '../../actions/userActions';
 
@@ -42,6 +43,13 @@ const Home = props => {
           <StepFour
             setCurrentStep={props.setCurrentStep}
             setPayWay={props.setPayWay}
+          />
+        );
+      
+      case 5:
+        return (
+          <StepFive
+            setCurrentStep={props.setCurrentStep}
           />
         );
 
