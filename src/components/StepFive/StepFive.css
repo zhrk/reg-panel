@@ -17,5 +17,25 @@
 }
 
 .step-five__form > .button {
+  margin-top: 80px;
   align-self: center;
+}
+
+.step-five__row {
+  border-top: 1px solid #e5e8ed;
+  border-bottom: 1px solid #e5e8ed;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  display: flex;
+}
+
+.step-five__col {
+  display: flex;
+  flex-direction: column;
+  max-width: 376px;
+  width: 100%;
+}
+
+.step-five__row > .step-five__col:not(:last-child) {
+  margin-right: 40px;
 }

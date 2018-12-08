@@ -61,3 +61,8 @@
 .input__error--active {
   opacity: 1;
 }
+
+.input__info {
+  font-size: 14px;
+  color: #999AB0;
+}

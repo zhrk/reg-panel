@@ -80,7 +80,7 @@ class Input extends Component {
 
   }
 
-  //methods for label/placeholder/classes render logic
+  //methods for label/placeholder/inputInfo/classes render logic
   renderLabel() {
     if (this.props.label !== '') {
       return (
@@ -94,6 +94,16 @@ class Input extends Component {
       return null;
     } else {
       return this.props.placeholder;
+    }
+  }
+
+  renderInputInfo() {
+    if (this.props.inputInfo === '') {
+      return null;
+    } else {
+      return (
+        <div className="input__info">{this.props.inputInfo}</div>
+      );
     }
   }
 
@@ -127,6 +137,7 @@ class Input extends Component {
           ref={this.inputField}
         />
         <div className={ "input__error" + this.errorTextClass() }>{this.state.errorMessage[0]}</div>
+        { this.renderInputInfo() }
       </div>
     );
   }
@@ -135,7 +146,8 @@ class Input extends Component {
 
 Input.defaultProps = {
   label: '',
-  placeholder: ''
+  placeholder: '',
+  inputInfo: ''
 };
 
 Input.propTypes = {
@@ -143,7 +155,8 @@ Input.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
   validate: PropTypes.string.isRequired,
-  errorMessages: PropTypes.object.isRequired
+  errorMessages: PropTypes.object.isRequired,
+  inputInfo: PropTypes.string
 };
 
 export default Input;
