@@ -14,6 +14,14 @@ class StepFive extends Component {
     this.systemNameInput = React.createRef();
     this.domainNameInput = React.createRef();
     this.subDomainTypeInput = React.createRef();
+    this.instalexEmailInput = React.createRef();
+    this.supportPhoneInput = React.createRef();
+    this.supportEmailInput = React.createRef();
+    this.socialInstagramInput = React.createRef();
+    this.socialFacebookInput = React.createRef();
+    this.socialYouTubeInput = React.createRef();
+    this.socialTelegramInput = React.createRef();
+    this.socialCustomInput = React.createRef();
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -29,7 +37,15 @@ class StepFive extends Component {
     let fields = [
       'systemName',
       'domainName',
-      'subDomainType'
+      'subDomainType',
+      'instalexEmail',
+      'supportPhone',
+      'supportEmail',
+      'socialInstagram',
+      'socialFacebook',
+      'socialYouTube',
+      'socialTelegram',
+      'socialCustom'
     ];
 
     let response = [];
@@ -143,6 +159,96 @@ class StepFive extends Component {
                 subInfo="На которой вы хотите запустить систему
                 (поддомен должен отличаться от основной системы)"
                 ref={this.subDomainTypeInput}
+              />
+            </div>
+          </div>
+          <div className="step-five__row">
+            <div className="step-five__col">
+              <Input
+                id="instalexEmail"
+                label="Аккаунт (почта) в instalex.pro"
+                placeholder="example@mail.com"
+                validate="email"
+                errorMessages={{
+                  email: 'Неверный формат почты'
+                }}
+                ref={this.instalexEmailInput}
+              />
+            </div>
+            <div className="step-five__col">
+              <Input
+                id="supportPhone"
+                label="Контакты для страницы поддержки"
+                placeholder="Номер телефона"
+                validate="min:9|max:14"
+                errorMessages={{
+                  min: 'Номер телефона слишком короткий',
+                  max: 'Номер телефона слишком длинный'
+                }}
+                ref={this.supportPhoneInput}
+              />
+              <Input
+                id="supportEmail"
+                placeholder="Почта"
+                validate="email"
+                errorMessages={{
+                  email: 'Неверный формат почты'
+                }}
+                ref={this.supportEmailInput}
+              />
+            </div>
+            <div className="step-five__col">
+              <Input
+                id="socialInstagram"
+                label="Ссылки на социальную сеть"
+                placeholder="Instagram"
+                validate="min:9|max:100"
+                errorMessages={{
+                  min: 'Ссылка слишком короткая',
+                  max: 'Ссылка слишком длинная'
+                }}
+                ref={this.socialInstagramInput}
+              />
+              <Input
+                id="socialFacebook"
+                placeholder="Facebook"
+                validate="min:9|max:100"
+                errorMessages={{
+                  min: 'Ссылка слишком короткая',
+                  max: 'Ссылка слишком длинная'
+                }}
+                ref={this.socialFacebookInput}
+              />
+              <Input
+                id="socialYouTube"
+                placeholder="YouTube"
+                validate="min:4|max:100"
+                errorMessages={{
+                  min: 'Ссылка слишком короткая',
+                  max: 'Ссылка слишком длинная'
+                }}
+                ref={this.socialYouTubeInput}
+              />
+              <Input
+                id="socialTelegram"
+                placeholder="Telegram"
+                validate="min:4|max:100"
+                errorMessages={{
+                  min: 'Ссылка слишком короткая',
+                  max: 'Ссылка слишком длинная'
+                }}
+                ref={this.socialTelegramInput}
+              />
+              <Input
+                id="socialCustom"
+                placeholder="Другая ссылка"
+                validate="min:4|max:100"
+                errorMessages={{
+                  min: 'Ссылка слишком короткая',
+                  max: 'Ссылка слишком длинная'
+                }}
+                inputInfo="Будут размещены в подвале вашего сайта"
+                ref={this.socialCustomInput}
               />
             </div>
           </div>
