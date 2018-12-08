@@ -37,9 +37,20 @@ class Tabs extends Component {
     return tabsList;
   }
 
-  /* TODO 
-    .tabs__info now just hidden, need some render logic
-  */
+  renderInfoList() {
+    const infoList = this.props.info.map(function(item, index) {
+      return (
+        <p
+          key={'tabs_info-id-' + index}
+        >
+          <span>{item.title + ' - '}</span>
+          {item.description}
+        </p>
+      );
+    });
+
+    return infoList;
+  }
 
   render() {
     return (
@@ -48,6 +59,9 @@ class Tabs extends Component {
           <div className="tabs__title">{this.props.title}</div>
           <div className="tabs__info">
             <img src={info} alt="Информация" aria-hidden="true" />
+            <div className="tabs__info-text">
+              { this.renderInfoList() }
+            </div>
           </div>
         </div>
         <div className="tabs__body">
@@ -63,6 +77,7 @@ class Tabs extends Component {
 Tabs.propTypes = {
   title: PropTypes.string.isRequired,
   tabs: PropTypes.array.isRequired,
+  info: PropTypes.array.isRequired,
   subInfo: PropTypes.string.isRequired
 };
 

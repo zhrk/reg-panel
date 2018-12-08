@@ -16,9 +16,62 @@
 }
 
 .tabs__info {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.tabs__info-text {
+  bottom: 32px;
+  left: calc(50% - 6px);
+  transform: translateX(-50%);
+  position: absolute;
+  width: 376px;
+  background-color: rgba(18, 34, 68, 0.8);
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  line-height: 24px;
+  font-size: 14px;
+  color: #FFF;
   opacity: 0;
-  visibility: hidden;
+  transition: all 0.2s ease-in-out;
   pointer-events: none;
+  z-index: 1;
+}
+
+.tabs__info-text > p {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs__info-text > p > span {
+  font-weight: 600;
+}
+
+.tabs__info:hover > .tabs__info-text {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.tabs__info-text:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 50%;
+  bottom: -21px;
+  transform: translateY(-50%);
+  border-top: 7px solid rgba(18, 34, 68, 0.8);
+  border-bottom: 7px solid rgba(0, 0, 0, 0);
+  border-left: 7px solid rgba(0, 0, 0, 0);
+  border-right: 7px solid rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  transition: all .2s ease-in-out;
 }
 
 .tabs__body {

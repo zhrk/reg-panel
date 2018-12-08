@@ -1,33 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Tab.css';
 import PropTypes from 'prop-types';
 
-class Tab extends Component {
+const Tab = ({ id, title, handler }) => {
 
-  constructor(props) {
-    super(props);
-
-    this.select = this.select.bind(this);
+  const select =() => {
+    handler(id);
   }
 
-  select() {
-    this.props.handler(this.props.id);
-  }
-
-  render() {
-    return (
-      <div className="tab">
-        <input className="tab__input" id={'tab__' + this.props.id} type="radio" name="subdomain" />
-        <label
-          className="tab__label"
-          htmlFor={'tab__' + this.props.id}
-          onClick={this.select}
-        >
-          {this.props.title}
-        </label>
-      </div>
-    );
-  }
+  return (
+    <div className="tab">
+      <input className="tab__input" id={'tab__' + id} type="radio" name="subdomain" />
+      <label
+        className="tab__label"
+        htmlFor={'tab__' + id}
+        onClick={select}
+      >
+        {title}
+      </label>
+    </div>
+  );
 
 }
 

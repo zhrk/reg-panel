@@ -124,6 +124,20 @@ class StepFive extends Component {
                     id: 'panel'
                   }
                 ]}
+                info={[
+                  {
+                    title: 'App',
+                    description: 'some description some description'
+                  },
+                  {
+                    title: 'System',
+                    description: 'some description some description'
+                  },
+                  {
+                    title: 'Panel',
+                    description: 'some description some description'
+                  }
+                ]}
                 subInfo="На которой вы хотите запустить систему
                 (поддомен должен отличаться от основной системы)"
                 ref={this.subDomainTypeInput}
