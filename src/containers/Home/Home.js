@@ -9,46 +9,45 @@ import StepTwo from '../../components/StepTwo/StepTwo';
 import StepThree from '../../components/StepThree/StepThree';
 import StepFour from '../../components/StepFour/StepFour';
 import { setCurrentStep } from '../../actions/progressActions';
-import { setName, setEmail, setRate, setPayWay } from '../../actions/userActions';
+import * as userActions from '../../actions/userActions';
 
 const Home = props => {
 
   const renderStep = () => {
-    const { setCurrentStep, setName, setEmail, setRate, setPayWay } = props;
-
     switch (props.progress.currentStep) {
       case 1:
         return (
           <StepOne
-            setCurrentStep={setCurrentStep}
-            setName={setName}
-            setEmail={setEmail}
+            setCurrentStep={props.setCurrentStep}
+            setName={props.setName}
+            setEmail={props.setEmail}
           />
         );
 
       case 2:
-        return <StepTwo setCurrentStep={setCurrentStep} />
+        return (
+          <StepTwo setCurrentStep={props.setCurrentStep} />
+        );
 
       case 3:
         return (
           <StepThree
-            setCurrentStep={setCurrentStep}
-            setRate={setRate}
+            setCurrentStep={props.setCurrentStep}
+            setRate={props.setRate}
           />
         );
 
       case 4:
         return (
           <StepFour
-            setCurrentStep={setCurrentStep}
-            setPayWay={setPayWay}
+            setCurrentStep={props.setCurrentStep}
+            setPayWay={props.setPayWay}
           />
         );
 
       default:
         break;
     }
-
   }
 
   return (
@@ -76,10 +75,10 @@ const mapStateToProps = store => {
 const mapDispatchToProps = dispatch => {
   return {
     setCurrentStep: step => dispatch(setCurrentStep(step)),
-    setName: name => dispatch(setName(name)),
-    setEmail: email => dispatch(setEmail(email)),
-    setRate: rate => dispatch(setRate(rate)),
-    setPayWay: payWay => dispatch(setPayWay(payWay))
+    setName: name => dispatch(userActions.setName(name)),
+    setEmail: email => dispatch(userActions.setEmail(email)),
+    setRate: rate => dispatch(userActions.setRate(rate)),
+    setPayWay: payWay => dispatch(userActions.setPayWay(payWay))
   };
 };
 
