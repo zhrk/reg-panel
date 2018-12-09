@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import './StepEight.css';
 import Title from '../Title/Title';
 import SubTitle from '../SubTitle/SubTitle';
-import Button from '../Button/Button';
+import PayWay from '../PayWay/PayWay';
 
 class StepEight extends Component {
 
   constructor(props) {
     super(props);
 
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleClick() {
     this.props.setCurrentStep(9);
   }
 
@@ -26,9 +25,26 @@ class StepEight extends Component {
           setCurrentStep={this.props.setCurrentStep}
         />
         <SubTitle text="Выберите способ оплаты и оплатите выбранный пакет франшизы" />
-        <form className="step-eight__form" onSubmit={this.handleSubmit}>
-          
-          <Button text="Далее" />
+        <form className="step-eight__form">
+          <div className="step-eight__form-total-price">Итого к оплате: <span>$21 990</span></div>
+          <div className="step-eight__form-pay-payways">
+            <PayWay
+              title="Оплата картой"
+              img="visa"
+              handler={this.handleClick}
+            />
+            <PayWay
+              title="Оплата PayPal"
+              img="paypal"
+              handler={this.handleClick}
+            />
+            <PayWay
+              title="Запросить счет на оплату"
+              img="bill"
+              info="*данный тип платежа будет обработан в ручном режиме"
+              handler={this.handleClick}
+            />
+          </div>
         </form>
       </div>
     );

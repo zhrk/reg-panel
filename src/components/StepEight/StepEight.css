@@ -17,7 +17,36 @@
   padding-bottom: 20px;
 }
 
-.step-eight__form > .button {
-  margin-top: 50px;
+.step-eight__form-total-price {
+  font-size: 20px;
+  text-align: center;
+  color: #122244;
+}
+
+.step-eight__form-total-price > span {
+  font-size: 20px;
+  color: #4A7AE1;
+}
+
+.step-eight__form-pay-payways {
+  margin-top: 40px;
   align-self: center;
+  display: flex;
+}
+
+.step-eight__form-pay-payways > .pay-way:not(:last-child) {
+  margin-right: 40px;
+}
+
+@media (max-width: 1023px) {
+  
+  .step-eight__form-pay-payways {
+    flex-direction: column;
+  }
+
+  .step-eight__form-pay-payways > .pay-way:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
 }
