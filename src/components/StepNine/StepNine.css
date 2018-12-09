@@ -1,0 +1,23 @@
+.step-nine {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.step-nine__form {
+  align-self: center;
+  margin-top: 40px;
+  max-width: 1208px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 20px;
+}
+
+.step-nine__form > .button {
+  margin-top: 50px;
+  align-self: center;
+}
