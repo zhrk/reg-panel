@@ -17,7 +17,24 @@
   padding-bottom: 20px;
 }
 
+.step-ten__form-text {
+  text-align: center;
+}
+
+.step-ten__form-links {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.step-ten__form-links > a:not(:last-child) {
+  margin-right: 24px;
+}
+
 .step-ten__form > .button {
   margin-top: 50px;
   align-self: center;
+}
+
+.step-ten__form > .step-ten__form-info {
+  margin-bottom: 56px;
 }

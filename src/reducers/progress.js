@@ -1,7 +1,7 @@
 import { SET_CURRENT_STEP } from '../actions/progressActions';
 
 const initialState = {
-  currentStep: 9,
+  currentStep: 10,
   totalSteps: 10
 }
 
