@@ -46,3 +46,97 @@
 .step-six__row > .step-six__col:not(:last-child) {
   margin-right: 40px;
 }
+
+.step-six__bottom {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.step-six__bottom-checkboxses-row {
+  display: flex;
+}
+
+.step-six__bottom-checkboxses > .step-six__bottom-checkboxses-row:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.step-six__bottom-checkboxses-row > .checkbox {
+  margin-right: 16px;
+}
+
+.step-six__bottom-checkboxses-row > div {
+  font-size: 16px;
+  color: #122244;
+}
+
+.step-six__bottom-checkboxses-row > div > a {
+  color: #4A7AE1;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.step-six__bottom-checkboxses-row > div > a:hover {
+  color: #1e5de4;
+}
+
+.step-six .sigCanvas {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px rgba(13, 42, 80, 0.16);
+  border-radius: 4px;
+}
+
+.step-six__bottom-signature-label {
+  font-size: 14px;
+  color: #122244;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1279px) {
+
+  .step-six__row {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  .step-six__bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-six__bottom-signature {
+    margin-top: 20px;
+  }
+
+  .step-six__bottom-checkboxses {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .step-six__row {
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .step-six__col > .upload {
+    margin-bottom: 20px;
+  }
+
+  .step-six__bottom-signature {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  .step-six__bottom-signature > canvas {
+    width: 100% !important;
+  }
+
+}

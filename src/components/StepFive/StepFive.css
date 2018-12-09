@@ -46,3 +46,31 @@
 .step-five__row > .step-five__col:not(:last-child) {
   margin-right: 40px;
 }
+
+@media (max-width: 1279px) {
+
+  .step-five__row {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .step-five__row {
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .step-five .tabs {
+    margin-top: 40px;
+  }
+
+  .step-five__col .select {
+    margin-bottom: 20px;
+  }
+
+}

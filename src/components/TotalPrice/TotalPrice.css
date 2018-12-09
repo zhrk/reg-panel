@@ -3,6 +3,9 @@
   left: 0;
   font-size: 18px;
   color: #122244;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
 }
 
 @media (max-width: 767px) {

@@ -15,14 +15,6 @@ class StepFive extends Component {
     this.systemNameInput = React.createRef();
     this.domainNameInput = React.createRef();
     this.subDomainTypeInput = React.createRef();
-    this.instalexEmailInput = React.createRef();
-    this.supportPhoneInput = React.createRef();
-    this.supportEmailInput = React.createRef();
-    this.socialInstagramInput = React.createRef();
-    this.socialFacebookInput = React.createRef();
-    this.socialYouTubeInput = React.createRef();
-    this.socialTelegramInput = React.createRef();
-    this.socialCustomInput = React.createRef();
     this.primaryLanguageInput = React.createRef();
     this.primaryСurrencyInput = React.createRef();
 
@@ -41,14 +33,6 @@ class StepFive extends Component {
       'systemName',
       'domainName',
       'subDomainType',
-      'instalexEmail',
-      'supportPhone',
-      'supportEmail',
-      'socialInstagram',
-      'socialFacebook',
-      'socialYouTube',
-      'socialTelegram',
-      'socialCustom',
       'primaryLanguage',
       'primaryСurrency'
     ];

@@ -1,0 +1,66 @@
+.upload {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload__label {
+  font-size: 14px;
+  color: #122244;
+  margin-bottom: 8px;
+}
+
+.upload__field {
+  max-width: 376px;
+  width: 100%;
+  height: 48px;
+  background-image: url('../../images/Upload//field-border.png');
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #999AB0;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  position: relative;
+}
+
+.upload__field:hover {
+  filter: brightness(0.5);
+  transition: all 0.15s ease-in-out;
+}
+
+.upload__field > img {
+  margin-right: 10px;
+}
+
+.upload__field-info {
+  max-width: 376px;
+  width: 100%;
+  height: 48px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-shadow: 0px 1px 2px rgba(13, 42, 80, 0.16);
+  border-radius: 4px;
+  z-index: 1;
+  transition: all 0.15s ease-in-out;
+}
+
+.upload__field-info > div {
+  display: flex;
+  align-items: center;
+}
+
+.upload__field-info > div > img {
+  margin-right: 8px;
+}
+
+.upload__field-info > img {
+  cursor: pointer;
+}
