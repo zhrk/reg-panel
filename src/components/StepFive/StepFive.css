@@ -23,11 +23,17 @@
 }
 
 .step-five__row {
-  border-top: 1px solid #e5e8ed;
-  border-bottom: 1px solid #e5e8ed;
   padding-top: 56px;
   padding-bottom: 56px;
   display: flex;
+}
+
+.step-five__form > .step-five__row:first-child {
+  border-top: 1px solid #e5e8ed;
+}
+
+.step-five__form > .step-five__row {
+  border-bottom: 1px solid #e5e8ed;
 }
 
 .step-five__col {

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Tab = ({ id, title, name, handler }) => {
 
-  const select =() => {
+  const select = () => {
     handler(id);
   }
 

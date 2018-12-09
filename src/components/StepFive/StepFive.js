@@ -5,6 +5,7 @@ import SubTitle from '../SubTitle/SubTitle';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 import Tabs from '../Tabs/Tabs';
+import Select from '../Select/Select';
 
 class StepFive extends Component {
 
@@ -22,6 +23,8 @@ class StepFive extends Component {
     this.socialYouTubeInput = React.createRef();
     this.socialTelegramInput = React.createRef();
     this.socialCustomInput = React.createRef();
+    this.primaryLanguageInput = React.createRef();
+    this.primaryСurrencyInput = React.createRef();
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -45,7 +48,9 @@ class StepFive extends Component {
       'socialFacebook',
       'socialYouTube',
       'socialTelegram',
-      'socialCustom'
+      'socialCustom',
+      'primaryLanguage',
+      'primaryСurrency'
     ];
 
     let response = [];
@@ -249,6 +254,50 @@ class StepFive extends Component {
                 }}
                 inputInfo="Будут размещены в подвале вашего сайта"
                 ref={this.socialCustomInput}
+              />
+            </div>
+          </div>
+          <div className="step-five__row">
+            <div className="step-five__col">
+              <Select
+                label="Основной язык для системы"
+                name="primaryLanguage"
+                ref={this.primaryLanguageInput}
+                options={[
+                  {
+                    title: 'English',
+                    value: 'english'
+                  },
+                  {
+                    title: 'Spanish',
+                    value: 'spanish'
+                  },
+                  {
+                    title: 'Chinese',
+                    value: 'chinese'
+                  },
+                  {
+                    title: 'Japanese',
+                    value: 'japanese'
+                  }
+                ]}
+              />
+            </div>
+            <div className="step-five__col">
+              <Select
+                label="Основная валюта для системы"
+                name="primaryСurrency"
+                ref={this.primaryСurrencyInput}
+                options={[
+                  {
+                    title: 'Доллар',
+                    value: 'USD'
+                  },
+                  {
+                    title: 'Евро',
+                    value: 'EUR'
+                  }
+                ]}
               />
             </div>
           </div>
