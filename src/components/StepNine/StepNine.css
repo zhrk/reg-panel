@@ -7,7 +7,7 @@
 
 .step-nine__form {
   align-self: center;
-  margin-top: 40px;
+  margin-top: 80px;
   max-width: 1208px;
   width: 100%;
   display: flex;
@@ -15,6 +15,29 @@
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 20px;
+}
+
+.step-nine__form-img {
+  display: flex;
+  justify-content: center;
+}
+
+.step-nine__form-img > img {
+  object-fit: contain;
+}
+
+.step-nine__form-text {
+  margin-top: 40px;
+  align-self: center;
+  max-width: 824px;
+  width: 100%;
+  line-height: 27px;
+  font-size: 16px;
+  text-align: center;
+  color: #122244;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
 }
 
 .step-nine__form > .button {

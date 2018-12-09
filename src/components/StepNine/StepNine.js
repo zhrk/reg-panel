@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './StepNine.css';
 import Title from '../Title/Title';
 import Button from '../Button/Button';
+import success from '../../images/StepNine/success.png';
 
 class StepNine extends Component {
 
@@ -25,7 +26,13 @@ class StepNine extends Component {
           setCurrentStep={this.props.setCurrentStep}
         />
         <form className="step-nine__form" onSubmit={this.handleSubmit}>
-          
+          <div className="step-nine__form-img">
+            <img src={success} alt="Успешно!" aria-hidden="true" />
+          </div>
+          <div className="step-nine__form-text">Ваша оплата прошла успешно,
+          в течении 24 часов в рабочее время с вами свяжется ваш
+          персональный менеджер и согласует дальнешие действия.
+          В течении 3х недель ваш сайт и система будут готовы</div>
           <Button text="Далее" />
         </form>
       </div>
