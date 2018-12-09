@@ -73,7 +73,7 @@ class StepFive extends Component {
         };
       });
 
-      console.log(data);
+      this.props.setCurrentStep(6);
 
     } else {
       // focus() on first fields[] el if errors length > 0

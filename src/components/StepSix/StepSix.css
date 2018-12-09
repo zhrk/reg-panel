@@ -1,0 +1,48 @@
+.step-six {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.step-six__form {
+  align-self: center;
+  margin-top: 40px;
+  max-width: 1208px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 20px;
+}
+
+.step-six__form > .button {
+  margin-top: 80px;
+  align-self: center;
+}
+
+.step-six__row {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  display: flex;
+}
+
+.step-six__form > .step-six__row:first-child {
+  border-top: 1px solid #e5e8ed;
+}
+
+.step-six__form > .step-six__row {
+  border-bottom: 1px solid #e5e8ed;
+}
+
+.step-six__col {
+  display: flex;
+  flex-direction: column;
+  max-width: 376px;
+  width: 100%;
+}
+
+.step-six__row > .step-six__col:not(:last-child) {
+  margin-right: 40px;
+}
