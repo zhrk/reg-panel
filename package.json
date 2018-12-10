@@ -7,7 +7,6 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^5.1.1",
-    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "react-signature-canvas": "^1.0.0-alpha.1",
     "redux": "^4.0.1"
@@ -32,5 +31,5 @@
   "devDependencies": {
     "prop-types": "^15.6.2"
   },
-  "homepage": "https://zhrk.github.io/projects/registration-panel"
+  "homepage": "https://zhrk.github.io/projects/reg-panel"
 }
