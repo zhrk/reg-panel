@@ -12,6 +12,10 @@ class StepTen extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   handleSubmit(event) {
     event.preventDefault();
     console.log('finish');

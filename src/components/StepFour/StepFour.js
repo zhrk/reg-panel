@@ -34,6 +34,10 @@ class StepFour extends Component {
 
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   select(payWay) {
     let tempArray = this.state.payWay;
     

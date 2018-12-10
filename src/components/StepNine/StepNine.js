@@ -17,6 +17,10 @@ class StepNine extends Component {
     this.props.setCurrentStep(10);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="step-nine">

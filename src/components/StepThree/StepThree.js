@@ -20,6 +20,10 @@ class StepThree extends Component {
     this.selectRate = this.selectRate.bind(this);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   handleSubmit(event) {
     event.preventDefault();
 

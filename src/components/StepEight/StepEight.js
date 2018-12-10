@@ -16,6 +16,10 @@ class StepEight extends Component {
     this.props.setCurrentStep(9);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="step-eight">
