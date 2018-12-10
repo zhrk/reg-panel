@@ -21,3 +21,131 @@
   margin-top: 80px;
   align-self: center;
 }
+
+.step-seven__title {
+  font-weight: 600;
+  font-size: 20px;
+  color: #4A7AE1;
+  display: flex;
+  align-items: center;
+}
+
+.step-seven__title > div {
+  width: 168px;
+}
+
+.step-seven__title:after {
+  content: '';
+  display: block;
+  background-color: #e5e8ed;
+  height: 1px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.step-seven__row {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 56px;
+}
+
+.step-seven__col {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-seven__row > .step-seven__col:not(:last-child) {
+  margin-right: 169px;
+}
+
+.step-seven__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-seven__info-title {
+  font-size: 16px;
+  color: #999AB0;
+  margin-bottom: 4px;
+}
+
+.step-seven__info-text {
+  font-size: 16px;
+  color: #122244;
+}
+
+.step-seven__col > .step-seven__info:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.step-seven__docs {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.step-seven__docs-title {
+  text-align: center;
+  font-size: 16px;
+  color: #999AB0;
+  align-self: center;
+}
+
+.step-seven__docs > div {
+  margin-top: 16px;
+  display: flex;
+}
+
+.step-seven__docs > div > .document:not(:last-child) {
+  margin-right: 40px;
+}
+
+@media (max-width: 1279px) {
+
+  .step-seven__row {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  .step-seven__title {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+}
+
+@media (max-width: 1023px) {
+
+  .step-seven__row > .step-seven__col:not(:last-child) {
+    margin-right: 100px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .step-seven__row > .step-seven__col:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .step-seven__row {
+    flex-direction: column;
+  }
+
+  .step-seven__docs > div {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-seven__docs > div > .document:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+}

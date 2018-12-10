@@ -69,6 +69,7 @@ const Home = props => {
         return (
           <StepSeven
             setCurrentStep={props.setCurrentStep}
+            user={props.user}
           />
         );
 
